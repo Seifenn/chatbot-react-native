@@ -16,7 +16,7 @@ const MessageBubble = () => {
 
         borderRadius: 20,
       }}
-   //   key={index}
+      //   key={index}
     >
       <Text style={{ fontSize: 16, color: "#fff" }}>
         Welcome to SMU Chatbot
@@ -26,7 +26,6 @@ const MessageBubble = () => {
 
       <View style={styles.rightArrowOverlap}></View>
     </View>
-    
   );
 };
 const styles = StyleSheet.create({
@@ -50,29 +49,6 @@ const styles = StyleSheet.create({
     bottom: -6,
     borderBottomLeftRadius: 18,
     right: -20,
-  },
-
-  /*Arrow head for recevied messages*/
-  leftArrow: {
-    position: "absolute",
-    backgroundColor: "#dedede",
-    //backgroundColor:"red",
-    width: 20,
-    height: 25,
-    bottom: 0,
-    borderBottomRightRadius: 25,
-    left: -10,
-  },
-
-  leftArrowOverlap: {
-    position: "absolute",
-    backgroundColor: "#eeeeee",
-    //backgroundColor:"green",
-    width: 20,
-    height: 35,
-    bottom: -6,
-    borderBottomRightRadius: 18,
-    left: -20,
   },
 });
 export default MessageBubble;
