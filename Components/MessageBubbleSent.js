@@ -3,7 +3,7 @@ const MessageBubbleSent = () => {
   return (
     <View
       style={{
-        backgroundColor: "#dedede",
+        backgroundColor: "#fff",
         padding: 10,
         borderRadius: 5,
         marginTop: 5,
@@ -32,7 +32,7 @@ const MessageBubbleSent = () => {
 const styles = StyleSheet.create({
   leftArrow: {
     position: "absolute",
-    backgroundColor: "#dedede",
+    backgroundColor: "#fff",
     //backgroundColor:"red",
     width: 20,
     height: 25,
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
 
   leftArrowOverlap: {
     position: "absolute",
-    backgroundColor: "#191e4d",
+    backgroundColor: "#E8E8E8",
     //backgroundColor:"green",
     width: 20,
     height: 35,

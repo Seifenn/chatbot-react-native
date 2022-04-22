@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
 
   rightArrowOverlap: {
     position: "absolute",
-    backgroundColor: "#191e4d",
+    backgroundColor: "#E8E8E8",
     //backgroundColor:"green",
     width: 20,
     height: 35,
