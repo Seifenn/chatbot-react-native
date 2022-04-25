@@ -1,5 +1,5 @@
 import { StyleSheet, View, Text } from "react-native";
-const MessageBubble = () => {
+const MessageBubble = ({ message }) => {
   return (
     <View
       style={{
@@ -18,9 +18,7 @@ const MessageBubble = () => {
       }}
       //   key={index}
     >
-      <Text style={{ fontSize: 16, color: "#fff" }}>
-        Welcome to SMU Chatbot
-      </Text>
+      <Text style={{ fontSize: 16, color: "#fff" }}>{message}</Text>
 
       <View style={styles.rightArrow}></View>
 
@@ -42,10 +40,10 @@ const styles = StyleSheet.create({
 
   rightArrowOverlap: {
     position: "absolute",
-    backgroundColor: "#E8E8E8",
+    backgroundColor: "#eff2fa",
     //backgroundColor:"green",
     width: 20,
-    height: 35,
+    height: 50,
     bottom: -6,
     borderBottomLeftRadius: 18,
     right: -20,

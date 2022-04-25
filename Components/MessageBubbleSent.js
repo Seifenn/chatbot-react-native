@@ -1,5 +1,5 @@
 import { StyleSheet, View, Text } from "react-native";
-const MessageBubbleSent = () => {
+const MessageBubbleSent = ({ message }) => {
   return (
     <View
       style={{
@@ -16,13 +16,9 @@ const MessageBubbleSent = () => {
         //alignItems:"center",
         borderRadius: 20,
       }}
-      //key={index}
     >
-      <Text
-        style={{ fontSize: 16, color: "#000", justifyContent: "center" }}
-        //key={index}
-      >
-        Message Sent
+      <Text style={{ fontSize: 16, color: "#000", justifyContent: "center" }}>
+        {message}
       </Text>
       <View style={styles.leftArrow}></View>
       <View style={styles.leftArrowOverlap}></View>
@@ -43,7 +39,7 @@ const styles = StyleSheet.create({
 
   leftArrowOverlap: {
     position: "absolute",
-    backgroundColor: "#E8E8E8",
+    backgroundColor: "#eff2fa",
     //backgroundColor:"green",
     width: 20,
     height: 35,
