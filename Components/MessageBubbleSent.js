@@ -3,49 +3,50 @@ const MessageBubbleSent = ({ message }) => {
   return (
     <View
       style={{
-        backgroundColor: "#fff",
+        backgroundColor: "rgb(10, 229, 229)",
         padding: 10,
+        marginLeft: "45%",
         borderRadius: 5,
+        //marginBottom: 15,
         marginTop: 5,
-        marginLeft: "5%",
+        marginRight: "5%",
         maxWidth: "50%",
-        alignSelf: "flex-start",
+        alignSelf: "flex-end",
         //maxWidth: 500,
-        //padding: 14,
 
-        //alignItems:"center",
         borderRadius: 20,
       }}
+      //   key={index}
     >
-      <Text style={{ fontSize: 16, color: "#000", justifyContent: "center" }}>
-        {message}
-      </Text>
-      <View style={styles.leftArrow}></View>
-      <View style={styles.leftArrowOverlap}></View>
+      <Text style={{ fontSize: 16, color: "#fff" }}>{message}</Text>
+
+      <View style={styles.rightArrow}></View>
+
+      <View style={styles.rightArrowOverlap}></View>
     </View>
   );
 };
 const styles = StyleSheet.create({
-  leftArrow: {
+  rightArrow: {
     position: "absolute",
-    backgroundColor: "#fff",
+    backgroundColor: "rgb(10, 229, 229)",
     //backgroundColor:"red",
     width: 20,
     height: 25,
     bottom: 0,
-    borderBottomRightRadius: 25,
-    left: -10,
+    borderBottomLeftRadius: 25,
+    right: -10,
   },
 
-  leftArrowOverlap: {
+  rightArrowOverlap: {
     position: "absolute",
     backgroundColor: "#eff2fa",
     //backgroundColor:"green",
     width: 20,
-    height: 35,
+    height: 50,
     bottom: -6,
-    borderBottomRightRadius: 18,
-    left: -20,
+    borderBottomLeftRadius: 18,
+    right: -20,
   },
 });
 export default MessageBubbleSent;

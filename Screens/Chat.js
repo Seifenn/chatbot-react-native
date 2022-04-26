@@ -31,14 +31,14 @@ export default function Chat() {
       <View style={styles.container}>
         <Feed state={[message, SetMessage]} />
         <MessageInput state={[message, SetMessage]} />
-      </View>
-    </KeyboardAvoidingView>
+        </View>
+  </KeyboardAvoidingView> 
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    display:"flex",
     flexDirection: "column",
     backgroundColor: "#fff",
     // borderWidth: 2,

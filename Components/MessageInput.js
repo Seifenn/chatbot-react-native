@@ -6,6 +6,7 @@ import {
   View,
   Pressable,
   Text,
+  TouchableOpacity
 } from "react-native";
 
 const MessageInput = ({ state }) => {
@@ -32,43 +33,49 @@ const MessageInput = ({ state }) => {
         onChangeText={(newText) => {
           SetText(newText);
           console.log(text);
+         
         }}
         placeholder="Aa"
       />
+      <TouchableOpacity style={styles.button}>
       <Pressable style={styles.button} onPress={pressHandler}>
         <Image
           style={styles.tinyLogo}
           source={require("./../assets/send.png")}
         />
       </Pressable>
+      </TouchableOpacity>
+      
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   input: {
-    marginTop: 10,
+    marginTop: 5,
     width: "75%",
     borderRadius: 25,
-    height: "50%",
     backgroundColor: "#eff2fa",
     // borderWidth: 2,
-    padding: 20,
+    padding: 5,
+    paddingLeft:10
   },
   container: {
     flexDirection: "row",
     backgroundColor: "#fff",
     justifyContent: "center",
     alignItems: "center",
-
     // borderWidth: 2,
+    height:"10%",
   },
-  button: {},
+  button: {
+    backgroundColor:"#eff2fa"
+  },
   tinyLogo: {
-    marginTop: 15,
-    marginLeft: 15,
-    width: 30,
-    height: 30,
+    marginTop: 5,
+    marginLeft: 10,
+    width: 25,
+    height: 25,
   },
 });
 

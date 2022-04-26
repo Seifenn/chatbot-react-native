@@ -1,52 +1,51 @@
 import { StyleSheet, View, Text } from "react-native";
-const MessageBubble = ({ message }) => {
+const MessageBubbleReceived = ({ message }) => {
   return (
     <View
       style={{
-        backgroundColor: "#0078fe",
+        backgroundColor: "#fff",
         padding: 10,
-        marginLeft: "45%",
         borderRadius: 5,
-        //marginBottom: 15,
         marginTop: 5,
-        marginRight: "5%",
+        marginLeft: "5%",
         maxWidth: "50%",
-        alignSelf: "flex-end",
+        alignSelf: "flex-start",
         //maxWidth: 500,
+        //padding: 14,
 
+        //alignItems:"center",
         borderRadius: 20,
       }}
-      //   key={index}
     >
-      <Text style={{ fontSize: 16, color: "#fff" }}>{message}</Text>
-
-      <View style={styles.rightArrow}></View>
-
-      <View style={styles.rightArrowOverlap}></View>
+      <Text style={{ fontSize: 16, color: "#000", justifyContent: "center" }}>
+        {message}
+      </Text>
+      <View style={styles.leftArrow}></View>
+      <View style={styles.leftArrowOverlap}></View>
     </View>
   );
 };
 const styles = StyleSheet.create({
-  rightArrow: {
+  leftArrow: {
     position: "absolute",
-    backgroundColor: "#0078fe",
+    backgroundColor: "#fff",
     //backgroundColor:"red",
     width: 20,
     height: 25,
     bottom: 0,
-    borderBottomLeftRadius: 25,
-    right: -10,
+    borderBottomRightRadius: 25,
+    left: -10,
   },
 
-  rightArrowOverlap: {
+  leftArrowOverlap: {
     position: "absolute",
     backgroundColor: "#eff2fa",
     //backgroundColor:"green",
     width: 20,
-    height: 50,
+    height: 35,
     bottom: -6,
-    borderBottomLeftRadius: 18,
-    right: -20,
+    borderBottomRightRadius: 18,
+    left: -20,
   },
 });
-export default MessageBubble;
+export default MessageBubbleReceived;
